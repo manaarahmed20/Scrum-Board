@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scrum Board</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+<body>
+    <div class="board-container" id="board-container">
+        <div class="column" id="todo-column" data-column-id="todo">
+            <div class="column-title">
+                To Do
+                <button class="add-card-button" id="add-card-todo">+</button>
+            </div>
+        </div>
+        <div class="column" id="in-progress-column" data-column-id="in-progress">
+            <div class="column-title">
+                In Progress
+                <button class="add-card-button" id="add-card-in-progress">+</button>
+            </div>
+        </div>
+        <div class="column" id="review-column" data-column-id="review">
+            <div class="column-title">
+                Review
+                <button class="add-card-button" id="add-card-review">+</button>
+            </div>
+        </div>
+        <div class="column" id="done-column" data-column-id="done">
+            <div class="column-title">
+                Done
+                <button class="add-card-button" id="add-card-done">+</button>
+            </div>
+        </div>
+    </div>
+
+<div class="modal" id="add-card-modal">
+    <div class="modal-content">
+        <h3>Add New Card</h3>
+        <input 
+            type="text" 
+            id="card-title-input" 
+            class="modal-input" 
+            placeholder="Enter card name"
+        > 
+        <input 
+            type="date" 
+            id="card-date-input" 
+            class="modal-input"
+        >
+            <input type="text" id="userName" class="modal-input"placeholder="Assigned User">
+            <select id="cardColumn"class="modal-input">
+                <option value="todo">To Do</option>
+                <option value="in-progress">In Progress</option>
+                <option value="done">Review</option>
+                <option value="done">Done</option>
+            </select>
+        <div class="modal-buttons">
+            <button id="cancel-card-btn" class="cancel-btn">Cancel</button>
+            <button id="submit-card-btn" class="submit-btn">Add</button>
+        </div>
+    </div>
+</div>
+    <script src="js/script.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
